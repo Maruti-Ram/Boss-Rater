@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Rate My Boss</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700|Maven+Pro|Roboto+Slab|Roboto:100,300,400,700" rel="stylesheet">
+</head>
+
+<body style="background-color: #EEEEEE">
+    <!-- Start: Nav Bar (fixed NavBar)-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#" onclick="location.reload()">BossRater</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left" id="searchBossName">
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="searchbartextinput" placeholder="Search Boss Name"  pattern="[a-zA-Z\s]+">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <li><a href="" class="modalactivator">Rate My Boss <i class="ion-chevron-right"></i></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- End: Nav Bar-->
+    <section class="cards" data-boss-feedback="comments" id="comments">
+
+    </section>
+
+    <!-- Start: Modal -->
+    <div class="overlays">
+        <div class="modals">
+            <div class="close-btn"><i class="ion-close"></i></div>
+            <div class="text-box">
+                <p class="lead">Post a review about the Boss..</p>
+                <p>Rate my boss is a platform where a constructive feedback and independent reviews for bosses and Managers!</p>
+            </div>
+            <div class="graphic"></div>
+            <form boss-data-feedback="form" onsubmit="location.reload()">
+                <input type="text" name="bossName" id="bossName" placeholder="Boss Name" autofocus required pattern="[a-zA-Z\s]+">
+                <input type="text" name="bossDepartment" id="department" placeholder="Department Name" autofocus required pattern="[a-zA-Z\s]+">
+                <br/>
+                <div class="form-group">
+                    <label for="ratingLevel" id="ratingLabel">Boss Rating: </label><output for="ratingLevel" id="ratingOutput">5</output>
+                    <input name="rating" id="ratingLevel" type="range" min="1" max="10" value="5">
+                </div>
+                <textarea cols="20" rows="4" class="form-control" name="bossFeedback" id="bossfeedback" placeholder="Please write a review."></textarea>
+                <br/>
+                <input type="submit">
+            </form>
+
+        </div>
+    </div>
+    <!-- End: Modal -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/select.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="scripts/formhandler.js" charset="utf-8"></script>
+    <script src="scripts/bosslist.js" charset="utf-8"></script>
+    <script src="scripts/upvoteshandler.js" charset="utf-8"></script>
+    <script src="scripts/datastore.js" charset="utf-8"></script>
+    <script src="scripts/boss.js" charset="utf-8"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
+</body>
+
+</html>

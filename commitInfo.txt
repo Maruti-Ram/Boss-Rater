@@ -1,0 +1,19 @@
+Commit History Info for Master Branch:
+
+March 19th-April 3rd:
+Commit history accurately representative.
+
+Jeremy Commit (Around April 2nd/3rd):
+https://github.com/tedouni/CPSC473-ProjectOne/commit/cd790702ed50181bb3a7bb87ff6c4c71ef2a07f1
+
+
+April 9th:
+Tayseer Edouni :Search/Filter based on Boss Name
+Akshay: Thumbs Up/Down implementation
+
+April 10th:
+UI/Design/CSS Maruti-Ram
+Pragya: About/Contact/ProjectSummary
+Tayseer Edouni: ProjectSummary
+
+There are other branches that can be looked at to see work done by others.

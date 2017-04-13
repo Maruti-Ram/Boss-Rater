@@ -1,0 +1,48 @@
+.modalactivator1 {
+  font-family: "Roboto Slab";
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 0.75em 2.75em;
+  transition: all 200ms ease-in; }
+  .modalactivator1:active {
+    transform: scale(0.9); }
+
+.modalactivator {
+  font-family: "Roboto Slab";
+  background: black;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 0.75em 2.75em;
+  transition: all 200ms ease-in; }
+  .modalactivator:hover {
+    background: black;
+    color: #F8D902;
+    text-decoration: none;
+    box-shadow: 0 0 0 2px black inset, 0 0 0 4px white inset; }
+  .modalactivator:active {
+    transform: scale(0.9);
+    text-decoration: none; }
+  .modalactivator .ion-chevron-right {
+    font-size: 0.75em;
+    margin-left: 0.2em; }
+
+@media (max-width: 740px) {
+  .modalactivator {
+    font-size: 15px; }
+
+  .modalactivator1 {
+    font-size: 15px; } }
+@media (max-width: 650px) {
+  .modalactivator {
+    font-size: 12px; }
+
+  .modalactivator1 {
+    font-size: 12px; } }
+
+/*# sourceMappingURL=modalactivator.css.map */

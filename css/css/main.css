@@ -1,0 +1,488 @@
+.modalactivator1 {
+  font-family: "Roboto Slab";
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 0.75em 2.75em;
+  transition: all 200ms ease-in; }
+  .modalactivator1:active {
+    transform: scale(0.9); }
+
+.modalactivator {
+  font-family: "Roboto Slab";
+  background: black;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 0.75em 2.75em;
+  transition: all 200ms ease-in; }
+  .modalactivator:hover {
+    background: black;
+    color: #F8D902;
+    text-decoration: none;
+    box-shadow: 0 0 0 2px black inset, 0 0 0 4px white inset; }
+  .modalactivator:active {
+    transform: scale(0.9);
+    text-decoration: none; }
+  .modalactivator .ion-chevron-right {
+    font-size: 0.75em;
+    margin-left: 0.2em; }
+
+@media (max-width: 740px) {
+  .modalactivator {
+    font-size: 15px; }
+
+  .modalactivator1 {
+    font-size: 15px; } }
+@media (max-width: 650px) {
+  .modalactivator {
+    font-size: 12px; }
+
+  .modalactivator1 {
+    font-size: 12px; } }
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none; }
+  .custom-select-wrapper select {
+    display: none; }
+
+.custom-select-trigger {
+  position: relative;
+  top: 1px;
+  display: block;
+  width: 201px;
+  padding: 0 20px;
+  font-size: 20px;
+  color: #000;
+  line-height: 58px;
+  background: white;
+  cursor: pointer;
+  border-left: 1px solid #000;
+  margin-bottom: 5px; }
+  .custom-select-trigger:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    right: 25px;
+    margin-top: -3px;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg) translateY(-50%);
+    transition: all 0.4s ease-in-out;
+    transform-origin: 50% 0; }
+
+.custom-select.opened .custom-select-trigger:after {
+  margin-top: 3px;
+  transform: rotate(-135deg) translateY(-50%); }
+
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  min-width: 100%;
+  margin: 15px 0;
+  border: 1px solid #F8D902;
+  box-sizing: border-box;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.07);
+  background: #000;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-15px); }
+
+.custom-select.opened .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(0); }
+
+.custom-options:before {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: 100%;
+  right: 25px;
+  width: 7px;
+  height: 7px;
+  margin-bottom: -4px;
+  border-top: 1px solid #F8D902;
+  border-left: 1px solid #F8D902;
+  background: #000;
+  transform: rotate(45deg);
+  transition: all 0.4s ease-in-out; }
+
+.custom-option {
+  font-family: "Maven Pro";
+  position: relative;
+  display: block;
+  padding: 0 20px;
+  border-bottom: 1px solid #F8D902;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 40px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out; }
+  .custom-option:last-of-type {
+    border-bottom: 0; }
+  .custom-option:hover, .custom-option.selection {
+    background: #fff;
+    color: black; }
+
+@media (max-width: 718px) {
+  .custom-select-trigger {
+    width: 100%;
+    margin-bottom: 10px; } }
+@media(max-width: 320px) {
+  .custom-select-trigger {
+    line-height: 45px; } }
+.overlays {
+  position: fixed;
+  background: rgba(248, 217, 2, 0.75);
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in-out; }
+  .overlays.is-open {
+    opacity: 1;
+    pointer-events: auto; }
+    .overlays.is-open .modals {
+      transform: translate(0, 0); }
+
+.modals {
+  font-family: "Maven Pro";
+  transform: translate(0, -100px);
+  transition: all 600ms cubic-bezier(0.25, 0.35, 0, 1.74);
+  max-width: 700px;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative; }
+  .modals .close-btn {
+    position: absolute;
+    z-index: 3;
+    top: -30px;
+    right: -30px;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out; }
+    .modals .close-btn:hover {
+      transform: scale(1.2); }
+  .modals .text-box {
+    max-width: 100%; }
+    .modals .text-box .lead {
+      color: black;
+      font-size: 30px;
+      line-height: 1.3; }
+    .modals .text-box p {
+      color: #999;
+      font-size: 18px; }
+  .modals .graphic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 256px;
+    height: 280px; }
+  .modals form {
+    position: relative;
+    z-index: 2;
+    background: black;
+    padding: 15px;
+    margin: 30px -20px -20px;
+    display: flex;
+    flex-wrap: wrap; }
+    .modals form textarea {
+      width: 100%;
+      height: 140px;
+      display: block;
+      padding: 15px 20px;
+      border: none;
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-radius: 0px; }
+      .modals form textarea:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px #F8D902 inset; }
+    .modals form input {
+      height: 60px;
+      border: 1px solid #000000;
+      display: block;
+      padding: 0 20px;
+      font-size: 18px;
+      margin-bottom: 5px;
+      font-family: "Maven Pro"; }
+      .modals form input:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px #F8D902 inset; }
+      .modals form input[type="text"] {
+        border: 1px solid #000000;
+        width: 35%; }
+      .modals form input[type="submit"] {
+        background: #F8D902;
+        width: 25%;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.2s ease-in; }
+        .modals form input[type="submit"]:hover {
+          box-shadow: 0 0 0 2px #F8D902 inset, 0 0 0 4px black inset;
+          letter-spacing: 1.3px;
+          font-weight: 700; }
+        .modals form input[type="submit"]:active {
+          transform: scale(0.9); }
+      .modals form input[type="range"] {
+        margin-top: 0.6em;
+        margin-left: 0.3em;
+        position: relative;
+        top: -1.5em;
+        width: 100%; }
+        .modals form input[type="range"]:hover {
+          box-shadow: 0 0 0 0; }
+        .modals form input[type="range"]:focus {
+          box-shadow: 0 0 0 0; }
+        .modals form input[type="range"]:active {
+          box-shadow: 0 0 0 0;
+          transform: scale(1); }
+    .modals form output {
+      display: inline-block;
+      position: relative;
+      top: 1px;
+      margin-left: 3px;
+      font-size: 1.2em;
+      font-weight: bold; }
+    .modals form label {
+      font-size: 1.2em;
+      margin-left: 1em; }
+
+@media (max-width: 820px) {
+  .modals {
+    margin: 10px; }
+    .modals .close-btn {
+      right: 0;
+      font-size: 25px; } }
+@media (max-width: 720px) {
+  .modals {
+    margin: 10px; }
+    .modals .close-btn {
+      right: 0;
+      font-size: 25px; } }
+@media (max-width: 718px) {
+  .graphic {
+    display: none; }
+
+  .modals .text-box {
+    max-width: 100%; }
+  .modals form {
+    flex-direction: column; }
+    .modals form textarea {
+      margin-bottom: 0; }
+    .modals form input[type="submit"] {
+      margin: 0;
+      width: 50%; }
+    .modals form input[type="text"] {
+      width: 100%; } }
+@media (max-width: 414px) {
+  .modals .close-btn {
+    top: 0; }
+  .modals .text-box .lead {
+    font-size: 20px;
+    line-height: 1.3px; }
+  .modals .text-box p {
+    font-size: 14px; } }
+@media (max-width: 360px) {
+  .modals .close-btn {
+    top: 0; }
+  .modals .text-box .lead {
+    font-size: 18px;
+    line-height: 1.3px; }
+  .modals .text-box p {
+    font-size: 12px; }
+  .modals form {
+    margin: 20px -20px -20px; } }
+@media (max-width: 320px) {
+  .modals .close-btn {
+    top: 0; }
+  .modals .text-box .lead {
+    font-size: 15px;
+    line-height: 1px; }
+  .modals .text-box p {
+    font-size: 12px; }
+  .modals form {
+    margin: 15px -20px -20px; }
+    .modals form input {
+      height: 45px; }
+    .modals form textarea {
+      height: 100px; } }
+html {
+  box-sizing: border-box; }
+
+*, :before, :after {
+  box-sizing: inherit; }
+
+.cards {
+  position: relative;
+  top: 3.75em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -ms-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+@media (min-width: 37.5em) {
+  .cards {
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -ms-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -ms-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center; } }
+.card {
+  width: 100%;
+  margin: 0.75em;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 3px 4px #757575; }
+  .card .inner-wrap {
+    padding: 1.5em; }
+    .card .inner-wrap p:last-of-type {
+      margin-bottom: 0; }
+  .card h3 {
+    margin: 0;
+    padding-bottom: 0.3em;
+    font-size: 1.75em;
+    font-family: "Maven Pro"; }
+    .card h3 a {
+      color: #000; }
+      .card h3 a:hover {
+        color: #000; }
+  .card .title {
+    line-height: 1.5;
+    font-size: 1.2em;
+    display: block;
+    font-family: "Roboto Slab"; }
+  .card p {
+    margin-top: 0.75em;
+    font-size: 1.2em;
+    color: #424242;
+    line-height: 1.5;
+    font-family: "Roboto";
+    text-align: justify; }
+  .card a {
+    color: #f44242;
+    text-decoration: none; }
+    .card a:hover, .card a:focus {
+      color: #dd0d0d;
+      text-decoration: none;
+      transition: all 0.3s; }
+  .card .likes-bar {
+    border: solid 1px black;
+    padding: 0 1.5em;
+    border-width: 1px 0 1px 0;
+    font-size: 90%; }
+    .card .likes-bar p {
+      color: black;
+      letter-spacing: 2px; }
+      .card .likes-bar p a:first-of-type {
+        color: #333;
+        font-weight: bold; }
+  .card .action-bar ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden; }
+  .card .action-bar li {
+    list-style: none;
+    float: left;
+    text-align: center;
+    font-size: 1.1em; }
+    .card .action-bar li a {
+      display: block;
+      padding: 1em 0;
+      color: #616161; }
+      .card .action-bar li a:hover, .card .action-bar li a:focus {
+        color: #000;
+        text-decoration: none; }
+    .card .action-bar li.comments {
+      width: 50%;
+      text-align: left;
+      padding: 0 1.5em;
+      border: solid black;
+      border-width: 0 0 0 0; }
+      .card .action-bar li.comments .comments-link {
+        font-family: "Montserrat";
+        font-size: 0.8em;
+        font-weight: bold; }
+    .card .action-bar li.share, .card .action-bar li.like {
+      width: 25%; }
+    .card .action-bar li.share {
+      border: solid black;
+      border-width: 0 1px 0 1px; }
+  .card .action-bar span:not(.comments-link) {
+    font-family: "Montserrat";
+    font-size: 0.8em;
+    height: 1px;
+    width: 1px;
+    padding: 0.3em;
+    border: 0; }
+
+@media (min-width: 37.5em) {
+  .card {
+    width: 75%; } }
+@media (min-width: 70.5em) {
+  .card {
+    width: 75%; } }
+@media(max-width: 1024px) {
+  .cards {
+    justify-content: center; }
+
+  .card {
+    width: 98%; } }
+@media(max-width: 414px) {
+  .cards {
+    justify-content: center; }
+
+  .card {
+    width: 94%; } }
+@media(max-width: 414px) {
+  .cards {
+    justify-content: center; } }
+
+/*# sourceMappingURL=main.css.map */
