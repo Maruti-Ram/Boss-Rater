@@ -7,11 +7,6 @@ Jeremy Mann,
 Akshay Pawar,
 Pragya Tak
 
-
-1.0	Project Scope
-BossRater is an application built for employees so that they may leave constructive feedback for their bosses (rating and feedback). BossRater is meant to be used within a company’s private network (not available for world wide web). There is no account creation (bosses cannot determine which employee wrote which feedback). Users can search for bosses by searching for their name in the search bar (this will filter all the feedback and display only the feedback with matching names). Employees may either like or dislike a rating by giving a thumbs up or a thumbs down. 
-
-
 2.0	Tools/Software Used
 BossRater uses the json-server tool (creates a local json server for simple data POST/GET requests). BossRater does not use any other backend platform (mainly due to the lack of account creation). BossRater uses Twitter’s Bootstrap (getbootstrap.com) for basic CSS formatting. Ionicons (http://ionicons.com/) was used for icons within the web application. Fontawesome (http://fontawesome.io/) was used to import custom fonts within the web application. 
 
